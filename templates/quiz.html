@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Platter - Tell us what you're craving </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='quiz_styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preload" href="/static/images/cooking.jpg" as ="img"/>
+    <script src="{{ url_for('static', filename='particles.js') }}"></script>
+</head>
+<div id="particles-js"></div>
+<body>
+    <div class="container">
+		<div class= "box">
+			<header>
+				<h1>what are you in the mood for today?</h1>
+			</header>
+
+      <form action="{{ url_for('get_restaurants') }}" method="post">
+        <input type="hidden" name="zip" value="{{ zipcode }}">
+            <div class="button-grid">
+                <button type="submit" name="category" value="pizza" class="food-btn">
+                  <img src="/static/images/pizza.png" alt="Pizza">
+                  <br>Pizza</br>
+                </button>
+                <button type="submit" name="category" value="chinese" class="food-btn">
+                  <img src="/static/images/chinese.png" alt="Chinese">
+                  <br>Chinese</br>
+                </button>
+                <button type="submit" name="category" value="mexican" class="food-btn">
+                  <img src="/static/images/mexican.png" alt="Mexican">
+                  <br>Mexican</br>
+                </button>
+                <button type="submit" name="category" value="thai" class="food-btn">
+                  <img src="/static/images/thai.png" alt="Thai">
+                  <br>Thai</br>
+                </button>
+                <button type="submit" name="category" value="burgers" class="food-btn">
+                  <img src="/static/images/burger.png" alt="Burgers">
+                  <br>Burgers</br>
+                </button>
+                <button type="submit" name="category" value="italian" class="food-btn">
+                  <img src="/static/images/italian.png" alt="Italian">
+                  <br>Italian</br>
+                </button>
+                <button type="submit" name="category" value="seafood" class="food-btn">
+                  <img src="/static/images/seafood.png" alt="Seafood">
+                  <br>Seafood</br>
+                </button>
+                <button type="submit" name="category" value="steakhouse" class="food-btn">
+                  <img src="/static/images/steak.png" alt="Steakhouses">
+                  <br>Steakhouses</br>
+                </button>
+                <button type="submit" name="category" value="korean" class="food-btn">
+                  <img src="/static/images/korean.png" alt="Korean">
+                  <br>Korean</br>
+                </button>
+                <button type="submit" name="category" value="sushi" class="food-btn">
+                  <img src="/static/images/sushi.png" alt="Sushi">
+                  <br>Sushi</br>
+                </button>
+                <button type="submit" name="category" value="breakfast" class="food-btn">
+                  <img src="/static/images/breakfast.png" alt="Breakfast">
+                  <br>Breakfast</br>
+                </button>
+                <button type="submit" name="category" value="sandwich" class="food-btn">
+                  <img src="/static/images/sandwich.png" alt="Sandwich">
+                  <br>Sandwiches</br>
+                </button>
+                <button type="submit" name="category" value="american" class="food-btn">
+                  <img src="/static/images/american.png" alt="American">
+                  <br>American</br>
+                </button>
+                <button type="submit" name="category" value="vegetarian" class="food-btn">
+                  <img src="/static/images/vegetarian.png" alt="Veg">
+                  <br>Vegetarian</br>
+                </button>
+                <button type="submit" name="category" value="indian" class="food-btn">
+                  <img src="/static/images/indian.png" alt="Indian">
+                  <br>Indian</br>
+                </button>
+                <button type="submit" name="category" value="cafe" class="food-btn">
+                  <img src="/static/images/cafe.png" alt="Cafe">
+                  <br>Cafe</br>
+                </button>
+
+            </div>   
+        </div>
+        <div class="idk-container">
+          <button type="submit" name="random" value="1" class="idk-button">
+              <br> can't decide? we'll pick for you!
+          </button>
+      </div>
+      
+        
+        </form>
+
+      </div>
+
+      <footer> <div class="hero-foot" style=" margin-top:2rem; position: absolute; bottom: 0; width: 100%; bottom:0;">
+        <div class="content has-text-centered">
+          <span style="font-size:0.9rem; margin-top:1rem; margin-bottom:1rem; color:rgb(255, 255, 255);">
+          Made with <span class="icon is-small" style="color:#F56F71"><i class="fa fa-heart"></i></span> by <a href="https://github.com/rayankbh" target="_blank" style="color: #d8c8fd;
+          text-decoration: none">Rayan</a>
+          </span>
+        </div>
+        </div>
+      </footer>
+
+      
+
+    </div>
+
+    
+
+</body> 
+
+
+</html>

@@ -1,0 +1,170 @@
+@import url(https://fonts.googleapis.com/css?family=Varela);
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to left, #a6cea1, #ffd35c);
+  font-family: "Varela", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-family: inherit;
+    font-size: 4em;
+    font-weight: bold;
+    color: #2f243a; 
+  }
+  
+  a {
+    color: #342e37;
+    transition: transform 0.3s; 
+  }
+  
+  a:visited {
+    color: #8241c2;
+  }
+
+  a:hover{
+    transform: scale(1.1);
+    animation-iteration-count: 1;
+    text-decoration: underline;
+    color: #8241c2
+  }
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured-restaurant {
+  margin-bottom: 40px;
+}
+
+.restaurant-card {
+  box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.2);
+  min-width: 300px;
+  max-width: 300px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  background-color: #ffffffe7;
+  border-radius: 40px;
+  font-family: inherit;
+  transition: transform 0.7s;
+}
+
+.restaurant-card:hover{
+    transform: scale(1.05)
+}
+
+
+.featured-card {
+  min-width: 550px;
+  font-family: inherit;
+  font-size: 1.5em;
+  padding: 20px; 
+
+}
+
+.image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  border: 2px solid #2f243a;
+}
+
+.featured-card .image-container {
+  height: 325px;
+}
+
+.featured-card-glow {
+    position: relative;
+    animation: featuredCardGlow 3s infinite ease;
+  }
+  
+  @keyframes featuredCardGlow {
+    0%, 100% {
+      box-shadow: 0 0 20px 5px #026c7c;
+    }
+    50% {
+      box-shadow: 0 0 40px 20px #07cdd179;
+    
+    }
+  }
+
+
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+
+}
+
+.restaurant-name {
+  font-size: 1.5em;
+  font-weight: bolder;
+  color: #2f243a;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.restaurant-info {
+  font-size: 1em;
+  color: #135f6c;
+  margin-bottom: 10px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.other-restaurants {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.back-btn {
+  display: block;
+  margin: 20px auto;
+  background-color: #5e5e5e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.back-btn:hover {
+  background-color: #4a4a4a;
+  animation-iteration-count: 1;
+  transform: scale(1.05);
+  align-items: center;
+}
+
+.error-message {
+
+  color: #2f243a;
+  font-family: inherit;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2em;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
